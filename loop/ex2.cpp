@@ -16,5 +16,20 @@ Sample Output 0
 
 */
 int main(){
-	
+	int n, count = 0;
+	cin>>n;
+	for(int i = 1 ; i <= sqrt(n); i++){
+		if(n%i==0){
+			count++;
+			if(n/i != i){
+				count++;
+			}
+		}
+	}
+	cout<<count<<endl;
+	for(int i = 1; i<=n;i++){
+		if(n%i==0){
+			cout<<i<<" ";
+		}
+	}
 }
